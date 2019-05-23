@@ -1,5 +1,28 @@
 # Mysql Book
 
-A book about mysql knowleage.
-
-
+- [前言](README.md)
+- [第一章 MySQL 架构](Chapter1/README.md)
+  - [1.1 客户端](Chapter1/1.1 客户端.md)
+  - [1.2 核心服务](Chapter1/1.2 核心服务.md)
+  - [1.3 优化器](Chapter1/1.3 优化器.md)
+- [第二章 索引](Chapter2/README.md)
+  - [2.1 发展历史](Chapter2/2.1 历史.md)
+  - [2.2 磁盘分布](Chapter2/2.2 磁盘.md)
+- [第三章 事务](Chapter3/README.md)
+  - [3.1 MVCC](Chapter3/3.1 MVCC.md)
+  - [3.2 锁](Chapter3/3.2 锁.md)
+  - [3.3 事务](Chapter3/3.3 事务.md)
+- [第四章 日志](Chapter4/README.md)
+  - [4.1 binlog](Chapter4/4.1 binlog.md)
+  - [4.2 redo log](Chapter4/4.2 redo log.md)
+  - [4.3 undo log](Chapter4/4.3 undo log.md)
+- [第五章 MySQL性能优化实战](Chapter5/README.md)
+  - [5.1 未使用索引导致扫全表](Chapter5/5.1 未使用索引.md)
+  - [5.2 隐式类型转换导致索引失效扫全表](Chapter5/5.2 隐式转换.md)
+  - [5.3 非最左匹配导致索引失效扫全表](Chapter5/5.3 非最左匹配.md)
+  - [5.4 未使用全索引导致受影响行数过多](Chapter5/5.4 未使用全索引.md)
+  - [5.5 使用全索引依然受影响行数过多](Chapter5/5.5 使用索引受影响行数过多.md)
+  - [5.6 包含RPC请求导致事务中锁行操作过长](Chapter5/5.6 锁时间过长.md)
+- [第六章 死锁](Chapter6/README.md)
+  - [6.1 不同的操作锁等待](Chapter6/6.1 不同操作锁等待.md)
+  - [6.2 同样的操作死锁](Chapter6/6.2 同样的操作锁等待.md)
