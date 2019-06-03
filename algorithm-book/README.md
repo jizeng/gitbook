@@ -3,6 +3,7 @@
 - [Introduction](README.md)
 - [0、基础知识](Chapter0/README.md)
   - [0.1 五大常见算法](Chapter0/0.1五大常见算法.md)
+  - [0.2 动态规划](Chapter0/0.2动态规划.md)
 - [一、二叉树](Chapter1/README.md)
   - [1.1 重建二叉树](Chapter1/1.1重建二叉树.md)
   - [1.2 树的子结构](Chapter1/1.2树的子结构.md)
