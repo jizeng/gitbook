@@ -1,0 +1,1206 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>0.4贪心算法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="0.5分支限界算法.html" />
+    
+    
+    <link rel="prev" href="0.3分治算法.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    0、基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="0.1五大常见算法.html">
+            
+                <a href="0.1五大常见算法.html">
+            
+                    
+                    0.1 五大常见算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="0.2动态规划.html">
+            
+                <a href="0.2动态规划.html">
+            
+                    
+                    0.2 动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="0.3分治算法.html">
+            
+                <a href="0.3分治算法.html">
+            
+                    
+                    0.3分治算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="0.4贪心算法.html">
+            
+                <a href="0.4贪心算法.html">
+            
+                    
+                    0.4贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="0.5分支限界算法.html">
+            
+                <a href="0.5分支限界算法.html">
+            
+                    
+                    0.5分支限界算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="0.6回溯法.html">
+            
+                <a href="0.6回溯法.html">
+            
+                    
+                    0.6回溯法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Chapter1/">
+            
+                <a href="../Chapter1/">
+            
+                    
+                    一、二叉树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter1/1.1重建二叉树.html">
+            
+                <a href="../Chapter1/1.1重建二叉树.html">
+            
+                    
+                    1.1 重建二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter1/1.2树的子结构.html">
+            
+                <a href="../Chapter1/1.2树的子结构.html">
+            
+                    
+                    1.2 树的子结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Chapter1/1.3二叉树的镜像.html">
+            
+                <a href="../Chapter1/1.3二叉树的镜像.html">
+            
+                    
+                    1.3 二叉树的镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Chapter1/1.4对称的二叉树.html">
+            
+                <a href="../Chapter1/1.4对称的二叉树.html">
+            
+                    
+                    1.4 对称的二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Chapter1/1.5从上往下打印二叉树.html">
+            
+                <a href="../Chapter1/1.5从上往下打印二叉树.html">
+            
+                    
+                    1.5 从上往下打印二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../Chapter1/1.6路径和为某一数值.html">
+            
+                <a href="../Chapter1/1.6路径和为某一数值.html">
+            
+                    
+                    1.6 二叉树中和为某一数值的路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../Chapter1/1.7第K个节点.html">
+            
+                <a href="../Chapter1/1.7第K个节点.html">
+            
+                    
+                    1.7 二叉查找数的第K个节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../Chapter1/1.8最低公共祖先.html">
+            
+                <a href="../Chapter1/1.8最低公共祖先.html">
+            
+                    
+                    1.8 树中两个节点的最低公共祖先
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Chapter2/">
+            
+                <a href="../Chapter2/">
+            
+                    
+                    二、链表
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter2/2.1删除重复节点.html">
+            
+                <a href="../Chapter2/2.1删除重复节点.html">
+            
+                    
+                    2.1 删除链表中重复的节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter2/2.2第K个结点.html">
+            
+                <a href="../Chapter2/2.2第K个结点.html">
+            
+                    
+                    2.2 链表中倒数第K个结点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Chapter2/2.3反转链表.html">
+            
+                <a href="../Chapter2/2.3反转链表.html">
+            
+                    
+                    2.3 反转链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Chapter2/2.4链表的复制.html">
+            
+                <a href="../Chapter2/2.4链表的复制.html">
+            
+                    
+                    2.4 复杂链表的复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Chapter2/2.5二叉树与链表.html">
+            
+                <a href="../Chapter2/2.5二叉树与链表.html">
+            
+                    
+                    2.5 二叉搜索树与双向链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Chapter2/2.6公共结点.html">
+            
+                <a href="../Chapter2/2.6公共结点.html">
+            
+                    
+                    2.6 两个链表的第一个公共结点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Chapter3/">
+            
+                <a href="../Chapter3/">
+            
+                    
+                    三、双指针
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Chapter3/3.1和为S的两个数字.html">
+            
+                <a href="../Chapter3/3.1和为S的两个数字.html">
+            
+                    
+                    3.1 和为S的两个数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Chapter3/3.2和为S的连续正数序列.html">
+            
+                <a href="../Chapter3/3.2和为S的连续正数序列.html">
+            
+                    
+                    3.2 和为S的连续正数序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Chapter3/3.3翻转单词顺序列.html">
+            
+                <a href="../Chapter3/3.3翻转单词顺序列.html">
+            
+                    
+                    3.3 翻转单词顺序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Chapter3/3.4左旋转字符串.html">
+            
+                <a href="../Chapter3/3.4左旋转字符串.html">
+            
+                    
+                    3.4 左旋转字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Chapter3/3.5旋转数组的最小元素.html">
+            
+                <a href="../Chapter3/3.5旋转数组的最小元素.html">
+            
+                    
+                    3.5 旋转数组的最小元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Chapter3/3.6将0挪至数组末尾.html">
+            
+                <a href="../Chapter3/3.6将0挪至数组末尾.html">
+            
+                    
+                    3.6 将0挪至数组末尾
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Chapter4/">
+            
+                <a href="../Chapter4/">
+            
+                    
+                    四、贪心
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter4/4.1连续子数组的最大和.html">
+            
+                <a href="../Chapter4/4.1连续子数组的最大和.html">
+            
+                    
+                    4.1 连续子数组的最大和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter4/4.2最长不含重复字符的字符串.html">
+            
+                <a href="../Chapter4/4.2最长不含重复字符的字符串.html">
+            
+                    
+                    4.2 最长不含重复字符的子字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Chapter4/4.3股票的最大利润.html">
+            
+                <a href="../Chapter4/4.3股票的最大利润.html">
+            
+                    
+                    4.3 股票的最大利润
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Chapter5/">
+            
+                <a href="../Chapter5/">
+            
+                    
+                    五、回溯
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Chapter5/5.1字符串的排列.html">
+            
+                <a href="../Chapter5/5.1字符串的排列.html">
+            
+                    
+                    5.1 字符串的排列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Chapter5/5.2二叉树中和为某一数值的路径.html">
+            
+                <a href="../Chapter5/5.2二叉树中和为某一数值的路径.html">
+            
+                    
+                    5.2 二叉树中和为某一值的路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Chapter6/">
+            
+                <a href="../Chapter6/">
+            
+                    
+                    六、动态规划
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Chapter6/6.1斐波拉契数列.html">
+            
+                <a href="../Chapter6/6.1斐波拉契数列.html">
+            
+                    
+                    6.1 斐波拉契数列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Chapter6/6.2矩形覆盖.html">
+            
+                <a href="../Chapter6/6.2矩形覆盖.html">
+            
+                    
+                    6.2 矩形覆盖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Chapter6/6.3跳台阶.html">
+            
+                <a href="../Chapter6/6.3跳台阶.html">
+            
+                    
+                    6.3 跳台阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Chapter6/6.4变态跳台阶.html">
+            
+                <a href="../Chapter6/6.4变态跳台阶.html">
+            
+                    
+                    6.4 变态跳台阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Chapter6/6.5剪绳子.html">
+            
+                <a href="../Chapter6/6.5剪绳子.html">
+            
+                    
+                    6.5 剪绳子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Chapter6/6.6数字转字符串.html">
+            
+                <a href="../Chapter6/6.6数字转字符串.html">
+            
+                    
+                    6.6 把数字转成字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../Chapter6/6.7礼物的最大价值.html">
+            
+                <a href="../Chapter6/6.7礼物的最大价值.html">
+            
+                    
+                    6.7 礼物的最大价值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../Chapter6/6.8丑数.html">
+            
+                <a href="../Chapter6/6.8丑数.html">
+            
+                    
+                    6.8 丑数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../Chapter6/6.9n个骰子的点数.html">
+            
+                <a href="../Chapter6/6.9n个骰子的点数.html">
+            
+                    
+                    6.9 n个骰子的点数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../Chapter6/6.10构建乘积数组.html">
+            
+                <a href="../Chapter6/6.10构建乘积数组.html">
+            
+                    
+                    6.10 构建乘积数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Chapter7/">
+            
+                <a href="../Chapter7/">
+            
+                    
+                    七、数字题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Chapter7/7.1数字出现次数.html">
+            
+                <a href="../Chapter7/7.1数字出现次数.html">
+            
+                    
+                    7.1 数字出现次数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../Chapter7/7.2二维数组的查找.html">
+            
+                <a href="../Chapter7/7.2二维数组的查找.html">
+            
+                    
+                    7.2 二维数组的查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../Chapter7/7.3字符串的旋转.html">
+            
+                <a href="../Chapter7/7.3字符串的旋转.html">
+            
+                    
+                    7.3 字符串的旋转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../Chapter7/7.4第一个只出现一次的字符位置.html">
+            
+                <a href="../Chapter7/7.4第一个只出现一次的字符位置.html">
+            
+                    
+                    7.4 第一个只出现一次的字符位置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../Chapter7/7.5最少的箭数量.html">
+            
+                <a href="../Chapter7/7.5最少的箭数量.html">
+            
+                    
+                    7.5 最少的箭数量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Chapter8/">
+            
+                <a href="../Chapter8/">
+            
+                    
+                    八、位运算
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Chapter8/8.1二进制中1的个数.html">
+            
+                <a href="../Chapter8/8.1二进制中1的个数.html">
+            
+                    
+                    8.1 二进制中1的个数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../Chapter8/8.2数组中只出现一次的数字.html">
+            
+                <a href="../Chapter8/8.2数组中只出现一次的数字.html">
+            
+                    
+                    8.2 数组中只出现一次的数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../Chapter8/8.3不用加减乘除法做加法.html">
+            
+                <a href="../Chapter8/8.3不用加减乘除法做加法.html">
+            
+                    
+                    8.3 不用加减乘除法做加法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Chapter9/">
+            
+                <a href="../Chapter9/">
+            
+                    
+                    九、二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Chapter10/">
+            
+                <a href="../Chapter10/">
+            
+                    
+                    十、栈&队列&堆
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Chapter10/10.1用两个栈实现队列.html">
+            
+                <a href="../Chapter10/10.1用两个栈实现队列.html">
+            
+                    
+                    10.1 用两个栈实现队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Chapter10/10.2包含min函数的栈.html">
+            
+                <a href="../Chapter10/10.2包含min函数的栈.html">
+            
+                    
+                    10.2 包含min函数的栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../Chapter10/10.3栈的压入弹出序列.html">
+            
+                <a href="../Chapter10/10.3栈的压入弹出序列.html">
+            
+                    
+                    10.3 栈的压入弹出序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../Chapter10/10.4数据流中的中位数.html">
+            
+                <a href="../Chapter10/10.4数据流中的中位数.html">
+            
+                    
+                    10.4 数据流中的中位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../Chapter10/10.5字符流中第一个不重复的字符.html">
+            
+                <a href="../Chapter10/10.5字符流中第一个不重复的字符.html">
+            
+                    
+                    10.5 字符流中第一个不重复的字符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../Chapter10/10.6滑动窗口的最大值.html">
+            
+                <a href="../Chapter10/10.6滑动窗口的最大值.html">
+            
+                    
+                    10.6 滑动窗口的最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >0.4贪心算法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="04&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;">0.4&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;</h1>
+<p><a href="https://www.cnblogs.com/steven_oyj/archive/2010/05/22/1741375.html" target="_blank">&#x4E94;&#x5927;&#x5E38;&#x7528;&#x7B97;&#x6CD5;&#x4E4B;&#x4E09;&#xFF1A;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;</a></p>
+<p>[TOC]</p>
+<h1 id="&#x4E00;&#x3001;&#x57FA;&#x672C;&#x6982;&#x5FF5;">&#x4E00;&#x3001;&#x57FA;&#x672C;&#x6982;&#x5FF5;</h1>
+<p>&#x200B;     &#x6240;&#x8C13;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x662F;&#x6307;&#xFF0C;&#x5728;&#x5BF9;&#x95EE;&#x9898;&#x6C42;&#x89E3;&#x65F6;&#xFF0C;&#x603B;&#x662F;&#x505A;&#x51FA;&#x5728;&#x5F53;&#x524D;&#x770B;&#x6765;&#x662F;&#x6700;&#x597D;&#x7684;&#x9009;&#x62E9;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4E0D;&#x4ECE;&#x6574;&#x4F53;&#x6700;&#x4F18;&#x4E0A;&#x52A0;&#x4EE5;&#x8003;&#x8651;&#xFF0C;&#x4ED6;&#x6240;&#x505A;&#x51FA;&#x7684;&#x4EC5;&#x662F;&#x5728;&#x67D0;&#x79CD;&#x610F;&#x4E49;&#x4E0A;&#x7684;&#x5C40;&#x90E8;&#x6700;&#x4F18;&#x89E3;&#x3002;</p>
+<p>&#x200B;     &#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x6CA1;&#x6709;&#x56FA;&#x5B9A;&#x7684;&#x7B97;&#x6CD5;&#x6846;&#x67B6;&#xFF0C;&#x7B97;&#x6CD5;&#x8BBE;&#x8BA1;&#x7684;&#x5173;&#x952E;&#x662F;&#x8D2A;&#x5FC3;&#x7B56;&#x7565;&#x7684;&#x9009;&#x62E9;&#x3002;&#x5FC5;&#x987B;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x4E0D;&#x662F;&#x5BF9;&#x6240;&#x6709;&#x95EE;&#x9898;&#x90FD;&#x80FD;&#x5F97;&#x5230;&#x6574;&#x4F53;&#x6700;&#x4F18;&#x89E3;&#xFF0C;&#x9009;&#x62E9;&#x7684;&#x8D2A;&#x5FC3;&#x7B56;&#x7565;&#x5FC5;&#x987B;&#x5177;&#x5907;&#x65E0;&#x540E;&#x6548;&#x6027;&#xFF0C;&#x5373;&#x67D0;&#x4E2A;&#x72B6;&#x6001;&#x4EE5;&#x540E;&#x7684;&#x8FC7;&#x7A0B;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x4EE5;&#x524D;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x53EA;&#x4E0E;&#x5F53;&#x524D;&#x72B6;&#x6001;&#x6709;&#x5173;&#x3002;</p>
+<p>&#x200B;    &#x6240;&#x4EE5;&#x5BF9;&#x6240;&#x91C7;&#x7528;&#x7684;&#x8D2A;&#x5FC3;&#x7B56;&#x7565;&#x4E00;&#x5B9A;&#x8981;&#x4ED4;&#x7EC6;&#x5206;&#x6790;&#x5176;&#x662F;&#x5426;&#x6EE1;&#x8DB3;&#x65E0;&#x540E;&#x6548;&#x6027;&#x3002;</p>
+<h1 id="&#x4E8C;&#x3001;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x7684;&#x57FA;&#x672C;&#x601D;&#x8DEF;">&#x4E8C;&#x3001;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x7684;&#x57FA;&#x672C;&#x601D;&#x8DEF;</h1>
+<p>&#x200B;    1.&#x5EFA;&#x7ACB;&#x6570;&#x5B66;&#x6A21;&#x578B;&#x6765;&#x63CF;&#x8FF0;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x200B;    2.&#x628A;&#x6C42;&#x89E3;&#x7684;&#x95EE;&#x9898;&#x5206;&#x6210;&#x82E5;&#x5E72;&#x4E2A;&#x5B50;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x200B;    3.&#x5BF9;&#x6BCF;&#x4E00;&#x5B50;&#x95EE;&#x9898;&#x6C42;&#x89E3;&#xFF0C;&#x5F97;&#x5230;&#x5B50;&#x95EE;&#x9898;&#x7684;&#x5C40;&#x90E8;&#x6700;&#x4F18;&#x89E3;&#x3002;</p>
+<p>&#x200B;    4.&#x628A;&#x5B50;&#x95EE;&#x9898;&#x7684;&#x89E3;&#x5C40;&#x90E8;&#x6700;&#x4F18;&#x89E3;&#x5408;&#x6210;&#x539F;&#x6765;&#x89E3;&#x95EE;&#x9898;&#x7684;&#x4E00;&#x4E2A;&#x89E3;&#x3002;</p>
+<h1 id="&#x4E09;&#x3001;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x9002;&#x7528;&#x7684;&#x95EE;&#x9898;">&#x4E09;&#x3001;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x9002;&#x7528;&#x7684;&#x95EE;&#x9898;</h1>
+<p>&#x200B;      <strong>&#x8D2A;&#x5FC3;&#x7B56;&#x7565;&#x9002;&#x7528;&#x7684;&#x524D;&#x63D0;&#x662F;&#xFF1A;&#x5C40;&#x90E8;&#x6700;&#x4F18;&#x7B56;&#x7565;&#x80FD;&#x5BFC;&#x81F4;&#x4EA7;&#x751F;&#x5168;&#x5C40;&#x6700;&#x4F18;&#x89E3;&#x3002;</strong></p>
+<p>&#x200B;    <strong>&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x9002;&#x7528;&#x7684;&#x60C5;&#x51B5;&#x5F88;&#x5C11;&#x3002;&#x4E00;&#x822C;&#xFF0C;&#x5BF9;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x5206;&#x6790;&#x662F;&#x5426;&#x9002;&#x7528;&#x4E8E;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5148;&#x9009;&#x62E9;&#x8BE5;&#x95EE;&#x9898;&#x4E0B;&#x7684;&#x51E0;&#x4E2A;&#x5B9E;&#x9645;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x5C31;&#x53EF;&#x505A;&#x51FA;&#x5224;&#x65AD;&#x3002;</strong></p>
+<h1 id="&#x56DB;&#x3001;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x6846;&#x67B6;">&#x56DB;&#x3001;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x6846;&#x67B6;</h1>
+<p>&#x200B;    &#x4ECE;&#x95EE;&#x9898;&#x7684;&#x67D0;&#x4E00;&#x521D;&#x59CB;&#x89E3;&#x51FA;&#x53D1;&#xFF1B;</p>
+<p>&#x200B;    while &#xFF08;&#x80FD;&#x671D;&#x7ED9;&#x5B9A;&#x603B;&#x76EE;&#x6807;&#x524D;&#x8FDB;&#x4E00;&#x6B65;&#xFF09;</p>
+<p>&#x200B;    { </p>
+<p>&#x200B;          &#x5229;&#x7528;&#x53EF;&#x884C;&#x7684;&#x51B3;&#x7B56;&#xFF0C;&#x6C42;&#x51FA;&#x53EF;&#x884C;&#x89E3;&#x7684;&#x4E00;&#x4E2A;&#x89E3;&#x5143;&#x7D20;&#xFF1B;</p>
+<p>&#x200B;    }</p>
+<p>&#x200B;    &#x7531;&#x6240;&#x6709;&#x89E3;&#x5143;&#x7D20;&#x7EC4;&#x5408;&#x6210;&#x95EE;&#x9898;&#x7684;&#x4E00;&#x4E2A;&#x53EF;&#x884C;&#x89E3;&#xFF1B;</p>
+<h1 id="&#x4E94;&#x3001;&#x8D2A;&#x5FC3;&#x7B56;&#x7565;&#x7684;&#x9009;&#x62E9;">&#x4E94;&#x3001;&#x8D2A;&#x5FC3;&#x7B56;&#x7565;&#x7684;&#x9009;&#x62E9;</h1>
+<p>&#x200B;     &#x56E0;&#x4E3A;&#x7528;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x89E3;&#x5C40;&#x90E8;&#x6700;&#x4F18;&#x89E3;&#x7684;&#x7B56;&#x7565;&#x6765;&#x8FBE;&#x5230;&#x5168;&#x5C40;&#x6700;&#x4F18;&#x89E3;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;&#x5224;&#x65AD;&#x95EE;&#x9898;&#x662F;&#x5426;&#x9002;&#x5408;&#x91C7;&#x7528;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x7B56;&#x7565;&#xFF0C;&#x627E;&#x5230;&#x7684;&#x89E3;&#x662F;&#x5426;&#x4E00;&#x5B9A;&#x662F;&#x95EE;&#x9898;&#x7684;&#x6700;&#x4F18;&#x89E3;&#x3002;</p>
+<h1 id="&#x516D;&#x3001;&#x4F8B;&#x9898;&#x5206;&#x6790;">&#x516D;&#x3001;&#x4F8B;&#x9898;&#x5206;&#x6790;</h1>
+<p>&#x200B;    &#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x8BD5;&#x7528;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x89E3;&#x7684;&#x9898;&#x76EE;&#xFF0C;&#x8D2A;&#x5FC3;&#x89E3;&#x7684;&#x786E;&#x4E0D;&#x9519;&#xFF0C;&#x53EF;&#x60DC;&#x4E0D;&#x662F;&#x6700;&#x4F18;&#x89E3;&#x3002;</p>
+<p>&#x200B;    [&#x80CC;&#x5305;&#x95EE;&#x9898;]&#x6709;&#x4E00;&#x4E2A;&#x80CC;&#x5305;&#xFF0C;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x662F;M=150&#x3002;&#x6709;7&#x4E2A;&#x7269;&#x54C1;&#xFF0C;&#x7269;&#x54C1;&#x53EF;&#x4EE5;&#x5206;&#x5272;&#x6210;&#x4EFB;&#x610F;&#x5927;&#x5C0F;&#x3002;</p>
+<p>&#x200B;    &#x8981;&#x6C42;&#x5C3D;&#x53EF;&#x80FD;&#x8BA9;&#x88C5;&#x5165;&#x80CC;&#x5305;&#x4E2D;&#x7684;&#x7269;&#x54C1;&#x603B;&#x4EF7;&#x503C;&#x6700;&#x5927;&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;&#x603B;&#x5BB9;&#x91CF;&#x3002;</p>
+<p>&#x200B;    &#x7269;&#x54C1; A B C D E F G</p>
+<p>&#x200B;    &#x91CD;&#x91CF; 35 30 60 50 40 10 25</p>
+<p>&#x200B;    &#x4EF7;&#x503C; 10 40 30 50 35 40 30</p>
+<p>&#x200B;    &#x5206;&#x6790;&#xFF1A;</p>
+<p>&#x200B;    &#x76EE;&#x6807;&#x51FD;&#x6570;&#xFF1A; &#x2211;pi&#x6700;&#x5927;</p>
+<p>&#x200B;    &#x7EA6;&#x675F;&#x6761;&#x4EF6;&#x662F;&#x88C5;&#x5165;&#x7684;&#x7269;&#x54C1;&#x603B;&#x91CD;&#x91CF;&#x4E0D;&#x8D85;&#x8FC7;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#xFF1A;&#x2211;wi&lt;=M( M=150)</p>
+<p>&#x200B;    &#xFF08;1&#xFF09;&#x6839;&#x636E;&#x8D2A;&#x5FC3;&#x7684;&#x7B56;&#x7565;&#xFF0C;&#x6BCF;&#x6B21;&#x6311;&#x9009;&#x4EF7;&#x503C;&#x6700;&#x5927;&#x7684;&#x7269;&#x54C1;&#x88C5;&#x5165;&#x80CC;&#x5305;&#xFF0C;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x5426;&#x6700;&#x4F18;&#xFF1F;</p>
+<p>&#x200B;    &#xFF08;2&#xFF09;&#x6BCF;&#x6B21;&#x6311;&#x9009;&#x6240;&#x5360;&#x91CD;&#x91CF;&#x6700;&#x5C0F;&#x7684;&#x7269;&#x54C1;&#x88C5;&#x5165;&#x662F;&#x5426;&#x80FD;&#x5F97;&#x5230;&#x6700;&#x4F18;&#x89E3;&#xFF1F;</p>
+<p>&#x200B;    &#xFF08;3&#xFF09;&#x6BCF;&#x6B21;&#x9009;&#x53D6;&#x5355;&#x4F4D;&#x91CD;&#x91CF;&#x4EF7;&#x503C;&#x6700;&#x5927;&#x7684;&#x7269;&#x54C1;&#xFF0C;&#x6210;&#x4E3A;&#x89E3;&#x672C;&#x9898;&#x7684;&#x7B56;&#x7565;&#x3002;</p>
+<p>&#x200B;    &#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x5E76;&#x4E0D;&#x662F;&#x5B8C;&#x5168;&#x4E0D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#xFF0C;&#x8D2A;&#x5FC3;&#x7B56;&#x7565;&#x4E00;&#x65E6;&#x7ECF;&#x8FC7;&#x8BC1;&#x660E;&#x6210;&#x7ACB;&#x540E;&#xFF0C;&#x5B83;&#x5C31;&#x662F;&#x4E00;&#x79CD;&#x9AD8;&#x6548;&#x7684;&#x7B97;&#x6CD5;&#x3002;</p>
+<p>&#x200B;    &#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x8FD8;&#x662F;&#x5F88;&#x5E38;&#x89C1;&#x7684;&#x7B97;&#x6CD5;&#x4E4B;&#x4E00;&#xFF0C;&#x8FD9;&#x662F;&#x7531;&#x4E8E;&#x5B83;&#x7B80;&#x5355;&#x6613;&#x884C;&#xFF0C;&#x6784;&#x9020;&#x8D2A;&#x5FC3;&#x7B56;&#x7565;&#x4E0D;&#x662F;&#x5F88;&#x56F0;&#x96BE;&#x3002;</p>
+<p>&#x200B;    &#x53EF;&#x60DC;&#x7684;&#x662F;&#xFF0C;&#x5B83;&#x9700;&#x8981;&#x8BC1;&#x660E;&#x540E;&#x624D;&#x80FD;&#x771F;&#x6B63;&#x8FD0;&#x7528;&#x5230;&#x9898;&#x76EE;&#x7684;&#x7B97;&#x6CD5;&#x4E2D;&#x3002;</p>
+<p>&#x200B;    &#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x7684;&#x8BC1;&#x660E;&#x56F4;&#x7ED5;&#x7740;&#xFF1A;&#x6574;&#x4E2A;&#x95EE;&#x9898;&#x7684;&#x6700;&#x4F18;&#x89E3;&#x4E00;&#x5B9A;&#x7531;&#x5728;&#x8D2A;&#x5FC3;&#x7B56;&#x7565;&#x4E2D;&#x5B58;&#x5728;&#x7684;&#x5B50;&#x95EE;&#x9898;&#x7684;&#x6700;&#x4F18;&#x89E3;&#x5F97;&#x6765;&#x7684;&#x3002;</p>
+<p>&#x200B;    &#x5BF9;&#x4E8E;&#x4F8B;&#x9898;&#x4E2D;&#x7684;3&#x79CD;&#x8D2A;&#x5FC3;&#x7B56;&#x7565;&#xFF0C;&#x90FD;&#x662F;&#x65E0;&#x6CD5;&#x6210;&#x7ACB;&#xFF08;&#x65E0;&#x6CD5;&#x88AB;&#x8BC1;&#x660E;&#xFF09;&#x7684;&#xFF0C;&#x89E3;&#x91CA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x200B;    &#xFF08;1&#xFF09;&#x8D2A;&#x5FC3;&#x7B56;&#x7565;&#xFF1A;&#x9009;&#x53D6;&#x4EF7;&#x503C;&#x6700;&#x5927;&#x8005;&#x3002;&#x53CD;&#x4F8B;&#xFF1A;</p>
+<p>&#x200B;    W=30</p>
+<p>&#x200B;    &#x7269;&#x54C1;&#xFF1A;A B C</p>
+<p>&#x200B;    &#x91CD;&#x91CF;&#xFF1A;28 12 12</p>
+<p>&#x200B;    &#x4EF7;&#x503C;&#xFF1A;30 20 20</p>
+<p>&#x200B;    &#x6839;&#x636E;&#x7B56;&#x7565;&#xFF0C;&#x9996;&#x5148;&#x9009;&#x53D6;&#x7269;&#x54C1;A&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x65E0;&#x6CD5;&#x518D;&#x9009;&#x53D6;&#x4E86;&#xFF0C;&#x53EF;&#x662F;&#xFF0C;&#x9009;&#x53D6;B&#x3001;C&#x5219;&#x66F4;&#x597D;&#x3002;</p>
+<p>&#x200B;    &#xFF08;2&#xFF09;&#x8D2A;&#x5FC3;&#x7B56;&#x7565;&#xFF1A;&#x9009;&#x53D6;&#x91CD;&#x91CF;&#x6700;&#x5C0F;&#x3002;&#x5B83;&#x7684;&#x53CD;&#x4F8B;&#x4E0E;&#x7B2C;&#x4E00;&#x79CD;&#x7B56;&#x7565;&#x7684;&#x53CD;&#x4F8B;&#x5DEE;&#x4E0D;&#x591A;&#x3002;</p>
+<p>&#x200B;    &#xFF08;3&#xFF09;&#x8D2A;&#x5FC3;&#x7B56;&#x7565;&#xFF1A;&#x9009;&#x53D6;&#x5355;&#x4F4D;&#x91CD;&#x91CF;&#x4EF7;&#x503C;&#x6700;&#x5927;&#x7684;&#x7269;&#x54C1;&#x3002;&#x53CD;&#x4F8B;&#xFF1A;</p>
+<p>&#x200B;    W=30</p>
+<p>&#x200B;    &#x7269;&#x54C1;&#xFF1A;A B C</p>
+<p>&#x200B;    &#x91CD;&#x91CF;&#xFF1A;28 20 10</p>
+<p>&#x200B;    &#x4EF7;&#x503C;&#xFF1A;28 20 10</p>
+<p>&#x200B;    &#x6839;&#x636E;&#x7B56;&#x7565;&#xFF0C;&#x4E09;&#x79CD;&#x7269;&#x54C1;&#x5355;&#x4F4D;&#x91CD;&#x91CF;&#x4EF7;&#x503C;&#x4E00;&#x6837;&#xFF0C;&#x7A0B;&#x5E8F;&#x65E0;&#x6CD5;&#x4F9D;&#x636E;&#x73B0;&#x6709;&#x7B56;&#x7565;&#x4F5C;&#x51FA;&#x5224;&#x65AD;&#xFF0C;&#x5982;&#x679C;&#x9009;&#x62E9;A&#xFF0C;&#x5219;&#x7B54;&#x6848;&#x9519;&#x8BEF;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="0.3分治算法.html" class="navigation navigation-prev " aria-label="Previous page: 0.3分治算法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="0.5分支限界算法.html" class="navigation navigation-next " aria-label="Next page: 0.5分支限界算法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"0.4贪心算法","level":"1.2.4","depth":2,"next":{"title":"0.5分支限界算法","level":"1.2.5","depth":2,"path":"Chapter0/0.5分支限界算法.md","ref":"Chapter0/0.5分支限界算法.md","articles":[]},"previous":{"title":"0.3分治算法","level":"1.2.3","depth":2,"path":"Chapter0/0.3分治算法.md","ref":"Chapter0/0.3分治算法.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter0/0.4贪心算法.md","mtime":"2019-06-03T12:52:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-05T06:54:21.935Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
