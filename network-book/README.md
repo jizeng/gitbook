@@ -10,5 +10,7 @@
   - [2.2 四次挥手](TCP/2.2四次挥手.md)
   - [2.3 流量控制](TCP/2.3流量控制.md)
   - [2.4 拥塞控制](TCP/2.4拥塞控制.md)
+  - [2.5 状态扭转](TCP/2.5状态扭转.md)
+  - [2.6 backlog](TCP/2.6backlog.md)
 - [三、Socket](Socket/README.md)
 
